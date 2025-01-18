@@ -162,3 +162,55 @@ the "venue" section.
 code 
 
 <div className="total_cost">Total Cost: ${venueTotalCost}</div>
+
+
+
+Code for add-ons
+Now, it's your turn to write some code. In this section, you will create the add-ons section. To begin, you 
+need to first create logic within avSlice.js under the src folder.
+1. Initialize the initialState array variable with objects to provide a data structure. Note that you need to add your 
+own images and the appropriate paths to them in the data below. Links to sample images are provided in Task 1: Setting up the environment. Include the code below within initialState of avSlice.js.
+
+code
+
+    {
+        img: "https://pixabay.com/images/download/business-20031_640.jpg",
+        name: "Projectors",
+        cost: 200,
+        quantity: 0,
+    },
+    {
+        img: "https://pixabay.com/images/download/speakers-4109274_640.jpg",
+        name: "Speaker",
+        cost: 35,
+        quantity: 0,
+    },
+    {
+        img: "https://pixabay.com/images/download/public-speaking-3926344_640.jpg",
+        name: "Microphones",
+        cost: 45,
+        quantity: 0,
+    },
+    {
+        img: "https://pixabay.com/images/download/whiteboard-2903269_640.png",
+        name: "Whiteboards",
+        cost: 80,
+        quantity: 0,
+    },
+
+    {
+        img: "https://pixabay.com/images/download/signpost-235079_640.jpg",
+        name: "Signage",
+        cost: 80,
+        quantity: 0,
+    },
+
+
+
+Increment and decrement
+- Now, you need to create the logic for incrementAvQuantity() and decrementAvQuantity() functions.
+1. The incrementAvQuantity() reducer function increments the quantity of a specific item in the state.
+2. It takes two parameters: state and action.
+3. The action.payload object contains the identifier of the item to increment.
+4. The reducer retrieves the item from the state using state[action.payload].
+5. If the item exists, it increments its quantity property by 1.
